@@ -7,6 +7,9 @@ $config = [
     'components' => [
         'request' => [
             'cookieValidationKey' => 'MrQsU247npsU3Q5bRP8BNff3_hESH80H',
+             'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ]
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -20,8 +23,12 @@ $config = [
         ],
         'urlManager' => [
             'class' => 'yii\web\UrlManager',
+             'enablePrettyUrl' => true,
+            'enableStrictParsing' => true,
             'showScriptName' => false,
-            'enablePrettyUrl' => true,
+            'rules' => [
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
