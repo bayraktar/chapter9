@@ -1,4 +1,4 @@
-## Mastering Yii Chapter 4 Source Code
+## Mastering Yii Chapter 9 Source Code
 
 The following source code is the project for Chapter 9 of Mastering Yii
 ISBN-CH: 978-1-78588-242-5_09
